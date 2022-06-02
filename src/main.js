@@ -1,5 +1,6 @@
 //base URL API
 var api_url= "http://localhost:8000/api";
+var api_url2= "http://localhost:8000";
 
 //Konfigurasi route
 var router =[
@@ -13,9 +14,24 @@ var router =[
         name: "Book",
         component: httpVueLoader("./src/components/Book.vue")
     },
+    {
+        path: "/grade",
+        name: "Grade",
+        component: httpVueLoader("./src/components/Grade.vue")
+    },
+    {
+        path: "/member",
+        name: "Member",
+        component: httpVueLoader("./src/components/Member.vue")
+    },
+    {
+        path: "/bookBorrow",
+        name: "BookBorrow",
+        component: httpVueLoader("./src/components/BookBorrow.vue")
+    },
 ];
 // untuk mengedit url
-var routers = new VueRouter({routers: router, base:"/" });
+var routers = new VueRouter({routes: router, base:"/" });
 
 //instance vue
 var app = new Vue({
